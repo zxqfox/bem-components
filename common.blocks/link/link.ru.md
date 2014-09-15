@@ -47,7 +47,7 @@
 
 Наглядно показано на примерах ниже:
 
-<a namme="native"></a>
+<a name="native"></a>
 **default**
 ```bemjson
 {

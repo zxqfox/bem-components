@@ -107,6 +107,7 @@ See following examples:
 ```
 
 <a name="size"></a>
+
 ### _size
 
 Implemented only for theme `normal`.

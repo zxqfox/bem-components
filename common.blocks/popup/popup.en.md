@@ -24,7 +24,7 @@ The following custom fields could be specified in BEMJSON declaration of the blo
         <th>Description</th>
     </tr>
     <tr>
-        <td><a href="#direction">directions</a></td>
+        <td><a href="direction">directions</a></td>
         <td>
             <code>Array</code>
         </td>
@@ -153,7 +153,7 @@ For example, to open `popup` at the top of the parent block use `top-left`, `top
     block : 'popup',
     mods : { autoclosable : true, theme: 'simple' },
     directions : ['top-left', 'top-center', 'top-right'],
-    content : 'Hello, world!'
+    content : 'Popup message'
 }
 ```
 
@@ -164,7 +164,7 @@ To open `popup` strictly at the `center-right` position do the following:
     block : 'popup',
     mods : { autoclosable : true, theme: 'simple' },
     directions : ['right-center'],
-    content : 'Hello, world!'
+    content : 'Popup message'
 }
 ```
 
@@ -177,7 +177,7 @@ Use `mainOffset` and/or `secondaryOffset` parameters to manage the offset direct
     direction : ['right-center'],
     mainOffset : 100,
     secondaryOffset : 100,
-    content : 'Hello, world!'
+    content : 'Popup message'
 }
 ```
 

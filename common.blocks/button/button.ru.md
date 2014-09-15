@@ -70,7 +70,7 @@
 
 Наглядно показано на примерах ниже:
 
-<a href="default"></a>
+<a name="default"></a>
 **default**
 
 ```bemjson

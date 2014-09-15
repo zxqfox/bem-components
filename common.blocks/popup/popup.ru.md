@@ -30,7 +30,7 @@
         <td>
             <code>Массив</code>
         </td>
-        <td>Управляет <a href="#directions">направлением открытия попапа</a> (например, <code>bottom-left</code>, где <code>bottom</code> является основным параметром, <code>left</code> - второстепенным) на странице относительно вызвавшего его элемета.</td>
+        <td>Управляет <a href="directions">направлением открытия попапа</a> (например, <code>bottom-left</code>, где <code>bottom</code> является основным параметром, <code>left</code> - второстепенным) на странице относительно вызвавшего его элемета.</td>
     </tr>
     <tr>
         <td>mainOffset</td>
@@ -153,7 +153,7 @@
     block : 'popup',
     mods : { autoclosable : true, theme: 'simple' },
     directions : ['top-left', 'top-center', 'top-right'],
-    content : 'Hello, world!'
+    content : 'Popup message'
 }
 ```
 
@@ -164,7 +164,7 @@
     block : 'popup',
     mods : { autoclosable : true, theme: 'simple' },
     directions : ['right-center'],
-    content : 'Hello, world!'
+    content : 'Popup message'
 }
 ```
 
@@ -177,7 +177,7 @@
     direction : ['right-center'],
     mainOffset : 100,
     secondaryOffset : 100,
-    content : 'Hello, world!'
+    content : 'Popup message'
 }
 ```
 
