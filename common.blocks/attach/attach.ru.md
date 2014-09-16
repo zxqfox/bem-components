@@ -38,7 +38,6 @@
         mods : { theme : 'normal' },
         icon : { block : 'icon', mods : { action : 'download' },
         text: 'Выберите файл'
-        }
     }
 }
 ```
