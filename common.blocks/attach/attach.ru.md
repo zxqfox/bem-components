@@ -4,6 +4,14 @@
 
 ### Краткая информация
 
+#### Модификаторы блока
+
+| Модификатор | Допустимое значение | Способ использования | Описание |
+| ----------- | ------------------- | -------------------- | -------- |
+| <a href=#themes>theme</a> | <code>'islands'</code> | <code>BEMJSON</code> | Стилевое оформление. |
+| <a href=#disabled>disabled</a> | <code>true</code> | <code>BEMJSON</code>, <code>JS</code> | Неактивное состояние. |
+| <a href=#focused>focused</a> | <code>true</code> | <code>BEMJSON</code>, <code>JS</code> | Блок в фокусе. |
+
 #### Специализированные поля блока
 
 | Поле | Тип | Описание |
@@ -11,20 +19,12 @@
 | <a href=#button>button</a> | <code>String</code>, <code>BEMJSON</code> | Внешний вид кнопки для выбора файла. |
 | <a href=#nofiletext>noFileText</a> | <code>String</code> | Текст сообщения, когда файл не выбран. |
 
-#### Модификаторы блока
-
-| Модификатор | Допустимое значение | Способ использования | Описание |
-| ----------- | ------------------- | -------------------- | -------- |
-| <a href=#themes>theme</a> | <code>'normal'</code> | <code>BEMJSON</code> | Стилевое оформление |
-| <a href=#disabled>disabled</a> | <code>true</code> | <code>BEMJSON</code>, <code>JS</code> | Блокировка блока |
-| <a href=#focused>focused</a> | <code>true</code> | <code>BEMJSON</code>, <code>JS</code> | Фокусировка блока |
-
 ### Описание
 
 По умолчанию блок `attach` визуально представлен:
 
 * кнопкой ([button](../button/button.ru.md)), вызывающей системное окно загрузки файла;
-* текстовым сообщением (например, «Файл не выбран»).
+* текстовым сообщением.
 
 После загрузки файла отображаются следующие элементы:
 
@@ -39,9 +39,78 @@
 
 ### Обзор блока
 
-### Специализированные поля блока
+### Модификаторы блока
 
-Список зарезервированных полей входного BEMJSON:
+<a name="themes"></a>
+
+### Модификатор `theme`
+
+Допустимое значение: `'islands'`.
+
+Способы использования: `BEMJSON`.
+
+Без указания модификатора `theme` отображается нативный вид контрола.
+
+Пример:
+
+```bemjson
+{
+    block : 'attach',
+    mods : { theme : 'islands' },
+    button : 'Выберите файл',
+    noFileText : 'файл не выбран'
+}
+```
+
+<a name="disabled"></a>
+
+#### Модификатор `disabled`
+
+Допустимое значение: `true`.
+
+Способы использования: `BEMJSON`, `JS`.
+
+Модификатор отвечает за неактивное состояние, при котором блок виден, но недоступен для действий пользователя.
+
+Пример:
+
+```bemjson
+{
+    block : 'attach',
+    mods : {
+        theme : 'islands',
+        disabled : true
+        },
+    button : 'Выберите файл',
+    noFileText : 'файл не выбран'
+}
+```
+
+<a name="focused"></a>
+
+#### Модификатор `focused`
+
+Допустимое значение: `true`.
+
+Способы использования: `BEMJSON`, `JS`.
+
+Модификатор `focused` отвечает за наличие фокуса на блоке.
+
+Пример:
+
+```bemjson
+{
+    block : 'attach',
+    mods : {
+        theme : 'islands',
+        focused : true
+        },
+    button : 'Выберите файл',
+    noFileText : 'файл не выбран'
+}
+```
+
+### Специализированные поля блока
 
 <a name="button"></a>
 
@@ -54,7 +123,7 @@
 ```bemjson
 {
     block : 'attach',
-    mods : { theme : 'normal' },
+    mods : { theme : 'islands' },
     button : 'Выберите файл'
 }
 ```
@@ -63,11 +132,11 @@
 ```bemjson
 {
     block : 'attach',
-    mods : { theme : 'normal' },
+    mods : { theme : 'islands' },
     button : {
         block : 'button',
         mods : {
-            theme : 'normal',
+            theme : 'islands',
             size : 'm'
             },
         icon : {
@@ -88,75 +157,7 @@
 ```bemjson
 {
     block : 'attach',
-    mods : { theme : 'normal' },
-    button : 'Выберите файл',
-    noFileText : 'файл не выбран'
-}
-```
-
-### Модификаторы блока
-
-<a name="themes"></a>
-
-### Модификатор `theme`
-
-Допустимое значение: `'normal'`.
-Способы использования: `BEMJSON`.
-
-Без указания модификатора `theme` отображается нативный вид контрола.
-
-Модификатор мажет быть задан в декларации BEMJSON:
-
-```bemjson
-{
-    block : 'attach',
-    mods : { theme : 'normal' },
-    button : 'Выберите файл',
-    noFileText : 'файл не выбран'
-}
-```
-
-<a name="disabled"></a>
-
-#### Модификатор `disabled`
-
-Допустимое значение: `true`.
-Способы использования: `BEMJSON`, `JS`.
-
-В неактивном состоянии блока кнопка выбора файла видна, но недоступна для действий пользователя. Блок не может получить модификатор `focused`.
-
-Модификатор может быть задан программно (JS) или в декларации BEMJSON:
-
-```bemjson
-{
-    block : 'attach',
-    mods : {
-        theme : 'normal',
-        disabled : true
-        },
-    button : 'Выберите файл',
-    noFileText : 'файл не выбран'
-}
-```
-
-<a name="focused"></a>
-
-#### Модификатор `focused`
-
-Допустимое значение: `true`.
-Способы использования: `BEMJSON`, `JS`.
-
-Модификатор `focused` в значении `true` автоматически выставляется блоку в момент, когда он находится в фокусе. Например, по нажатию клавиши `Tab` или при щелчке мышью.
-
-Модификатор может быть задан программно (JS) или в декларации BEMJSON:
-
-```bemjson
-{
-    block : 'attach',
-    mods : {
-        theme : 'normal',
-        focused : true
-        },
+    mods : { theme : 'islands' },
     button : 'Выберите файл',
     noFileText : 'файл не выбран'
 }
