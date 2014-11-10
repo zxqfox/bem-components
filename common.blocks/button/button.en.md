@@ -4,7 +4,7 @@
 
 ## Brief overview
 
-### Vodifiers of the block
+### Modifiers of the block
 
 | Modifier | Available values | Use cases | Description |
 | ----------- | ------------------- | -------------------- | -------- |
