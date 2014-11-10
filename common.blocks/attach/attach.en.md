@@ -10,7 +10,7 @@
 | ----------- | ------------------- | -------------------- | -------- |
 | <a href=#disabled>disabled</a> | <code>true</code> | <code>BEMJSON</code>, <code>JS</code> | A disabled state. |
 | <a href=#focused>focused</a> | <code>true</code> | <code>BEMJSON</code>, <code>JS</code> | The block is in focus. |
-| <a href=#themes>theme</a> | <code>'islands'</code> | <code>BEMJSON</code> | Custom design. |
+| <a href=#themes>theme</a> | <code>'islands'</code> | <code>BEMJSON</code> | A custom design. |
 
 ### Custom fields of the block
 
