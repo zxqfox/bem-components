@@ -12,7 +12,7 @@
 
 ## Обзор блока
 
-Блок `z-index-group` располагает блоки слоями друг над другом. Их размещением по z-оси управляет модификатор [level}(#index-level).
+Блок `z-index-group` располагает блоки слоями друг над другом. Их размещением по z-оси управляет модификатор [level](#index-level).
 
 ### Модификаторы блока
 
@@ -20,7 +20,7 @@
 
 #### Модификатор `level`
 
-Допустимые значения: Целые числа от 0 до 9.
+Допустимые значения: целые числа от 0 до 9.
 
 Способы использования: `BEMJSON`, `JS`.
 
@@ -36,8 +36,5 @@
     mix : { block : 'z-index-group', mods : { level : 1 } },
     mods : { autoclosable : true, theme : 'normal' },
     content : 'I am under the block with { level : 2 } value!'
-}
-```
-nt : 'I am under the block with { level : 2 } value!'
 }
 ```
