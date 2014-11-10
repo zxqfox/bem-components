@@ -1,6 +1,6 @@
 # button
 
-`button` block is used to manage size, state, content and appearance of a button.
+`button` block is used to manage a size, state, content and appearance of a button.
 
 ## Brief overview
 
@@ -11,8 +11,8 @@
 | <a href=#buttontype>type</a> | <code>'link'</code>, <code>'submit'</code> | <code>BEMJSON</code> | Button types.|
 | <a href=#buttonview>view</a> | <code>'action'</code>, <code>'pseudo'</code> | <code>BEMJSON</code> | Visual highlighting.|
 | <a href=#buttontoggle>togglable</a> | <code>'check'</code>, <code>'radio'</code> | <code>BEMJSON</code> | Toggle types.|
-| <a href=#buttonpressed>pressed</a> | <code>true</code> | Automatic | Specifies pressed state of a button. |
-| <a href=#disabled>disabled</a> | <code>true</code> | <code>BEMJSON</code>, <code>JS</code> | Disabled state. |
+| <a href=#buttonpressed>pressed</a> | <code>true</code> | Automatic | A pressed state of a button. |
+| <a href=#disabled>disabled</a> | <code>true</code> | <code>BEMJSON</code>, <code>JS</code> | A disabled state. |
 | <a href=#focused>focused</a> | <code>true</code> | <code>BEMJSON</code>, <code>JS</code> | The block is in focus. |
 | <a href=#buttonsize>size</a> | <code>'s'</code>, <code>'m'</code>, <code>'l'</code>, <code>'xl'</code> | <code>BEMJSON</code> | Button sizes. The sizes are used only for a <a href="#buttonthemes">button</a> with <code>theme</code> modifier with <code>islands</code> value.|
 | <a href=#buttonthemes>theme</a> | <code>'islands'</code> | <code>BEMJSON</code> | Custom design. |
@@ -28,7 +28,7 @@
 | <a href=#buttonicon>icon</a> | <code>BEMJSON</code> | An icon on a button that is based on <a href="../icon/icon.en.md">icon</a> block. |
 | <a href=#buttontitle>title</a> | <code>String</code> | A tooltip. |
 | <a href=#buttonid>id</a> | <code>BEMJSON</code> | A unique identifier of a button. |
-| <a href=#buttontab>tabIndex</a> | <code>Number</code> | A tab order between the buttons. |
+| <a href=#buttontab>tabIndex</a> | <code>Number</code> | A tab order between buttons. |
 
 ## Block overview
 
@@ -291,7 +291,7 @@ Specifies a value that is sent to a server. This value always goes in pair with 
 
 Do not use `name` field for a <a href="link-button">button with link behavior</a>.
 
-#### Поле `val`
+#### `val` field
 
 Specifies a value that is sent to a server. This value always goes in pair with a value of `name` value.
 
@@ -354,4 +354,4 @@ Specifies a unique identifier of a button.
 
 #### `tabIndex` field
 
-Specifies a tab order between the buttons by pressing `Tab`
+Specifies a tab order between the buttons by pressing `Tab`.

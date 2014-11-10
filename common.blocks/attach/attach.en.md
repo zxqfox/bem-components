@@ -8,7 +8,7 @@
 
 | Modifier | Available values | Use cases | Description |
 | ----------- | ------------------- | -------------------- | -------- |
-| <a href=#disabled>disabled</a> | <code>true</code> | <code>BEMJSON</code>, <code>JS</code> | Disabled state. |
+| <a href=#disabled>disabled</a> | <code>true</code> | <code>BEMJSON</code>, <code>JS</code> | A disabled state. |
 | <a href=#focused>focused</a> | <code>true</code> | <code>BEMJSON</code>, <code>JS</code> | The block is in focus. |
 | <a href=#themes>theme</a> | <code>'islands'</code> | <code>BEMJSON</code> | Custom design. |
 
