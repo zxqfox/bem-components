@@ -6,7 +6,7 @@
 
 ### Modifiers of the block
 
-| Modifier name | Available values | Use cases | Description |
+| Modifier | Available values | Use cases | Description |
 | ----------- | ------------------- | -------------------- | -------- |
 | <a href=#disabled>disabled</a> | <code>true</code> | <code>BEMJSON</code>, <code>JS</code> | Disabled state. |
 | <a href=#focused>focused</a> | <code>true</code> | <code>BEMJSON</code>, <code>JS</code> | The block is in focus. |
@@ -34,10 +34,10 @@ When the file upload is complete, the following elements are available:
 
 The block functionality does not support:
 
-* more than one file attaching;
-* drag-and-drop.
+* More than one file attaching.
+* Drag-and-drop.
 
-### Modifiera of the block
+### Modifiers of the block
 
 <a name="disabled"></a>
 
@@ -48,8 +48,6 @@ Available value: `true`.
 Use cases: `BEMJSON`, `JS`.
 
 The modifier provides inactive/disabled state to the block. `disabled` modifier is used to make the block visible but not available for user actions.
-
-Example:
 
 ```bemjson
 {
@@ -70,8 +68,6 @@ Use cases: `BEMJSON`, `JS`.
 
 The modifier provides focus to the block.
 
-Example:
-
 ```bemjson
 {
     block : 'attach',
@@ -90,8 +86,6 @@ Available value: `'islands'`.
 Use case: `BEMJSON`.
 
 If `theme` modifier is not specified, native representation of a control is applied.
-
-Example:
 
 ```bemjson
 {
