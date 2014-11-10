@@ -8,14 +8,14 @@
 
 | Modifier | Available values | Use cases | Description |
 | ----------- | ------------------- | -------------------- | -------- |
-| <a href=#buttontype>type</a> | <code>'link'</code>, <code>'submit'</code> | <code>BEMJSON</code> | Button types.|
+| <a href=#buttontype>type</a> | <code>'link'</code>, <code>'submit'</code> | <code>BEMJSON</code> | A button type.|
 | <a href=#buttonview>view</a> | <code>'action'</code>, <code>'pseudo'</code> | <code>BEMJSON</code> | Visual highlighting.|
-| <a href=#buttontoggle>togglable</a> | <code>'check'</code>, <code>'radio'</code> | <code>BEMJSON</code> | Toggle types.|
-| <a href=#buttonpressed>pressed</a> | <code>true</code> | Automatic | A pressed state of a button. |
+| <a href=#buttontoggle>togglable</a> | <code>'check'</code>, <code>'radio'</code> | <code>BEMJSON</code> | A toggle type of a button.|
+| <a href=#buttonpressed>pressed</a> | <code>true</code> | Automatic | A pressed state. |
 | <a href=#disabled>disabled</a> | <code>true</code> | <code>BEMJSON</code>, <code>JS</code> | A disabled state. |
 | <a href=#focused>focused</a> | <code>true</code> | <code>BEMJSON</code>, <code>JS</code> | The block is in focus. |
-| <a href=#buttonsize>size</a> | <code>'s'</code>, <code>'m'</code>, <code>'l'</code>, <code>'xl'</code> | <code>BEMJSON</code> | Button sizes. The sizes are used only for a <a href="#buttonthemes">button</a> with <code>theme</code> modifier with <code>islands</code> value.|
-| <a href=#buttonthemes>theme</a> | <code>'islands'</code> | <code>BEMJSON</code> | Custom design. |
+| <a href=#buttonsize>size</a> | <code>'s'</code>, <code>'m'</code>, <code>'l'</code>, <code>'xl'</code> | <code>BEMJSON</code> | A button size. The sizes are used only for a <a href="#buttonthemes">button</a> with <code>theme</code> modifier with <code>islands</code> value.|
+| <a href=#buttonthemes>theme</a> | <code>'islands'</code> | <code>BEMJSON</code> | A custom design. |
 
 ### Custom fields of the block
 
