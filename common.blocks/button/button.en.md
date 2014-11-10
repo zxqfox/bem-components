@@ -12,19 +12,19 @@
 | <a href=#buttonview>view</a> | <code>'action'</code>, <code>'pseudo'</code> | <code>BEMJSON</code> | Visual highlighting.|
 | <a href=#buttontoggle>togglable</a> | <code>'check'</code>, <code>'radio'</code> | <code>BEMJSON</code> | A toggle type of a button.|
 | <a href=#buttonpressed>pressed</a> | <code>true</code> | Automatic | A pressed state. |
-| <a href=#disabled>disabled</a> | <code>true</code> | <code>BEMJSON</code>, <code>JS</code> | A disabled state. |
-| <a href=#focused>focused</a> | <code>true</code> | <code>BEMJSON</code>, <code>JS</code> | The block is in focus. |
-| <a href=#buttonsize>size</a> | <code>'s'</code>, <code>'m'</code>, <code>'l'</code>, <code>'xl'</code> | <code>BEMJSON</code> | A button size. The sizes are used only for a <a href="#buttonthemes">button</a> with <code>theme</code> modifier with <code>islands</code> value.|
+| <a href=#buttondisabled>disabled</a> | <code>true</code> | <code>BEMJSON</code>, <code>JS</code> | A disabled state. |
+| <a href=#buttonfocused>focused</a> | <code>true</code> | <code>BEMJSON</code>, <code>JS</code> | The block is in focus. |
+| <a href=#buttonsize>size</a> | <code>'s'</code>, <code>'m'</code>, <code>'l'</code>, <code>'xl'</code> | <code>BEMJSON</code> | A button size. The sizes are used only for a <a href="#buttonthemes">button with theme modifier with islands value</a>.|
 | <a href=#buttonthemes>theme</a> | <code>'islands'</code> | <code>BEMJSON</code> | A custom design. |
 
 ### Custom fields of the block
 
 | Field | Type | description |
 | ---- | --- | -------- |
-| <a href=#buttonname>name</a> | <code>String</code> | A value that will be sent to a server or obtained using client scripts. Do not use for a <a href="link-button">button with link behavior</a>. |
-| <a href=#buttonval>val</a> | <code>String</code> | A value that will be sent to a server or obtained using client scripts. Do not use for a <a href="link-button">button with link behavior</a>. |
+| <a href=#buttonname>name</a> | <code>String</code> | A value that will be sent to a server or obtained using client scripts. Do not use for a <a href="#link-button">button with link behavior</a>. |
+| <a href=#buttonval>val</a> | <code>String</code> | A value that will be sent to a server or obtained using client scripts. Do not use for a <a href="#link-button">button with link behavior</a>. |
 | <a href=#buttontext>text</a> | <code>String</code>| A button text. |
-| <a href=#buttonurl>url</a> | <code>String</code>| A link address. Use only for a <a href="link-button">button with link behavior</a>. |
+| <a href=#buttonurl>url</a> | <code>String</code>| A link address. Use only for a <a href="#link-button">button with link behavior</a>. |
 | <a href=#buttonicon>icon</a> | <code>BEMJSON</code> | An icon on a button that is based on <a href="../icon/icon.en.md">icon</a> block. |
 | <a href=#buttontitle>title</a> | <code>String</code> | A tooltip. |
 | <a href=#buttonid>id</a> | <code>BEMJSON</code> | A unique identifier of a button. |
@@ -48,7 +48,7 @@ Use case: `BEMJSON`.
 
 Use `type` modifier with `link` value to create a button that behaves like a link.
 
-Specify additional a link address in <a href="buttonurl">url</a> field in BEMJSON input data.
+Specify additional a link address in <a href="#buttonurl">url</a> field in BEMJSON input data.
 
 ```bemjson
 {
@@ -93,7 +93,7 @@ Use `view` modifier with `action` value to visually highlight a button on a page
 
 ##### A pseudobutton (`view` modifier with `pseudo` value)
 
-Use `view` modifier with `pseudo` value to change visual representation of a button. For example in case when you do not need to focus attention on the button.
+Use `view` modifier with `pseudo` value to change visual representation of a button. For example in case you do not need to focus attention on the button.
 
 ```bemjson
 {
@@ -136,7 +136,7 @@ The first click presses the button, and the second releases it.
 ##### A radio-button (`togglable` modifier with `radio` value)
 
 The first click presses the button and it cannot be released by the next click.
-This button type is used as a part of [radio-group](../radio-group.en.md).
+This button type is used as a part of [radio-group](../radio-group/radio-group.en.md).
 
 ```bemjson
 {
@@ -171,7 +171,7 @@ Use case: automatic.
 
 `pressed` modifier with `true` value is added to a button automatically at the moment when this button is pressed.
 
-This modifier is used for buttons with <a href="buttontoggle">togglable</a> modifier.
+This modifier is used for buttons with <a href="#buttontoggle">togglable</a> modifier.
 
 <a name="buttondisabled"></a>
 
@@ -217,7 +217,7 @@ Available values for `islands` theme: `'s'`, `'m'`, `'l'`, `'xl'`.
 
 Use case: `BEMJSON`.
 
-Use `size` modifier only for blocks with `islands` <a href="buttonthemes">theme</a>.
+Use `size` modifier only for blocks with `islands` <a href="#buttonthemes">theme</a>.
 
 Provides all types of buttons with `size` value.
 
@@ -271,7 +271,7 @@ Use case: `BEMJSON`.
 
 If `theme` modifier is not specified, native representation of a control is applied.
 
-**Note!** Choosing a theme `normal` requires <a href="buttonsize">size</a> modifier usage.
+**Note!** Choosing a theme `normal` requires <a href="#buttonsize">size</a> modifier usage.
 
 ```bemjson
 {
@@ -283,19 +283,21 @@ If `theme` modifier is not specified, native representation of a control is appl
 
 ### Custom fields of the block
 
-<a name="buttonthemes"></a>
+<a name="buttonname"></a>
 
 #### `name` field
 
 Specifies a value that is sent to a server. This value always goes in pair with a value of `val` value.
 
-Do not use `name` field for a <a href="link-button">button with link behavior</a>.
+Do not use `name` field for a <a href="#link-button">button with link behavior</a>.
+
+<a name="buttonval"></a>
 
 #### `val` field
 
 Specifies a value that is sent to a server. This value always goes in pair with a value of `name` value.
 
-Do not use `val` field for a <a href="link-button">button with link behavior</a>.
+Do not use `val` field for a <a href="#link-button">button with link behavior</a>.
 
 ```bemjson
 {
@@ -311,15 +313,17 @@ Do not use `val` field for a <a href="link-button">button with link behavior</a>
 
 Specifies a text on a button.
 
+<a name="buttonurl"></a>
+
 #### `url` field
 
-Specifies a link address that will be opened by clicking a <a href="link-button">button with link behavior</a>.
+Specifies a link address that will be opened by clicking a <a href="#link-button">button with link behavior</a>.
 
-You must use this field only for a <a href="link-button">button with link behavior</a>.
+You must use this field only for a <a href="#link-button">button with link behavior</a>.
 
 #### `icon` field
 
-Specifies an icon on a button. Declare the icon in BEMJSON using [icon](../icon.en.md) block.
+Specifies an icon on a button. Declare the icon in BEMJSON using [icon](../icon/icon.en.md) block.
 
 ```bemjson
 {
@@ -332,6 +336,8 @@ Specifies an icon on a button. Declare the icon in BEMJSON using [icon](../icon.
     }
 }
 ```
+
+<a name="buttontitle"></a>
 
 #### `title` title
 
@@ -348,9 +354,13 @@ Specifies a tooltip content. The tooltip appearance depends on a browser and you
 }
 ```
 
+<a name="buttonid"></a>
+
 #### `id` field
 
 Specifies a unique identifier of a button.
+
+<a name="buttontab"></a>
 
 #### `tabIndex` field
 

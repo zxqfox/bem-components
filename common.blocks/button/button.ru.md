@@ -6,14 +6,14 @@
 
 ### Модификаторы блока
 
-| Модификатор | Допустимые значение | Способы использования | Описание |
+| Модификатор | Допустимые значения | Способы использования | Описание |
 | ----------- | ------------------- | -------------------- | -------- |
 | <a href=#buttontype>type</a> | <code>'link'</code>, <code>'submit'</code> | <code>BEMJSON</code> | Типы кнопок.|
 | <a href=#buttonview>view</a> | <code>'action'</code>, <code>'pseudo'</code> | <code>BEMJSON</code> | Визуальное выделение.|
 | <a href=#buttontoggle>togglable</a> | <code>'check'</code>, <code>'radio'</code> | <code>BEMJSON</code> | Типы переключателей.|
 | <a href=#buttonpressed>pressed</a> | <code>true</code> | Автоматически | Определяет действие «нажатие» на кнопку. |
-| <a href=#disabled>disabled</a> | <code>true</code> | <code>BEMJSON</code>, <code>JS</code> | Неактивное состояние. |
-| <a href=#focused>focused</a> | <code>true</code> | <code>BEMJSON</code>, <code>JS</code> | Блок в фокусе. |
+| <a href=#buttondisabled>disabled</a> | <code>true</code> | <code>BEMJSON</code>, <code>JS</code> | Неактивное состояние. |
+| <a href=#buttonfocused>focused</a> | <code>true</code> | <code>BEMJSON</code>, <code>JS</code> | Блок в фокусе. |
 | <a href=#buttonsize>size</a> | <code>'s'</code>, <code>'m'</code>, <code>'l'</code>, <code>'xl'</code> | <code>BEMJSON</code> | Размер кнопки. Используется только для <a href="#buttonthemes">кнопок с модификатором</a> <code>theme</code> в значении <code>islands</code>.|
 | <a href=#buttonthemes>theme</a> | <code>'islands'</code> | <code>BEMJSON</code> | Стилевое оформление. |
 
@@ -21,10 +21,10 @@
 
 | Поле | Тип | Описание |
 | ---- | --- | -------- |
-| <a href=#buttonname>name</a> | <code>String</code> | Значение, отправляемое на сервер. Не использутеся, если выбран тип кнопки с модификатором <code>type</code> в значении <code>link</code>. |
-| <a href=#buttonval>val</a> | <code>String</code> | Значение, отправляемое на сервер. Не использутеся, если выбран тип кнопки с модификатором <code>type</code> в значении <code>link</code>. |
+| <a href=#buttonname>name</a> | <code>String</code> | Значение, отправляемое на сервер. Не используется, если выбран тип кнопки с модификатором <code>type</code> в значении <code>link</code>. |
+| <a href=#buttonval>val</a> | <code>String</code> | Значение, отправляемое на сервер. Не используется, если выбран тип кнопки с модификатором <code>type</code> в значении <code>link</code>. |
 | <a href=#buttontext>text</a> | <code>String</code>| Текст кнопки. |
-| <a href=#buttonurl>url</a> | <code>String</code>| Адрес ссылки. Используется только для <a href="#link-button">кнопки с модификатором</a> <code>type</code> в значении <code>link</code>. |
+| <a href=#buttonurl>url</a> | <code>String</code>| Адрес ссылки. Используется только для <a href="#link-button">кнопки с модификатором type в значении link</a>. |
 | <a href=#buttonicon>icon</a> | <code>BEMJSON</code> | Иконка на кнопке. Формируется блоком <a href="../icon/icon.ru.md">icon</a>. |
 | <a href=#buttontitle>title</a> | <code>String</code> | Всплывающая подсказка. |
 | <a href=#buttonid>id</a> | <code>BEMJSON</code> | Уникальный идентификатор кнопки. |
@@ -48,7 +48,7 @@
 
 ##### Кнопка-ссылка (модификатор `type` в значении `link`)
 
-Используется для изменения поведения кнопки: при нажатии кнопка ведет себя как ссылка. Переход осуществляется по адресу, указанному в поле <a href="buttonurl">url</a>.
+Используется для изменения поведения кнопки: при нажатии кнопка ведет себя как ссылка. Переход осуществляется по адресу, указанному в поле <a href="#buttonurl">url</a>.
 
 ```bemjson
 {
@@ -137,7 +137,7 @@
 
 ##### Радиокнопка (модификатор `togglable` в значении `radio`)
 
-Нажатие на кнопку вдавливает ее и она не может быть приведена в первоначальное состояние. Используется в составе [радиогруппы](../radio-group.ru.md).
+Нажатие на кнопку вдавливает ее, и она не может быть приведена в первоначальное состояние. Используется в составе [радиогруппы](../radio-group/radio-group.ru.md).
 
 ```bemjson
 {
@@ -170,7 +170,7 @@
 
 Способ использования: выставляется автоматически при нажатии на кнопку.
 
-Определяет действие «нажатие» на кнопку. Используется для кнопок с модификатором <a href="buttontoggle">togglable</a>.
+Определяет действие «нажатие» на кнопку. Используется для кнопок с модификатором <a href="#buttontoggle">togglable</a>.
 
 <a name="buttondisabled"></a>
 
@@ -216,7 +216,7 @@
 
 Способ использования: `BEMJSON`.
 
-Модификатор `size` используется, только если блоку установлен модификатор <a href="buttonthemes">theme</a> в значении `islands`.
+Модификатор `size` используется, только если блоку установлен модификатор <a href="#buttonthemes">theme</a> в значении `islands`.
 
 Задает размер всем типам кнопок.
 
@@ -268,7 +268,7 @@
 
 Способ использования: `BEMJSON`.
 
-При выборе модификатора `theme` в значении `islands` необходимо обязательно указывать модификатор <a href="buttonsize">size</a>.
+При выборе модификатора `theme` в значении `islands` необходимо обязательно указывать модификатор <a href="#buttonsize">size</a>.
 
 Без указания модификатора `theme` отображается нативный вид контрола.
 
@@ -282,19 +282,21 @@
 
 ### Специализированные поля блока
 
-<a name="buttonthemes"></a>
+<a name="buttonname"></a>
 
 #### Поле `name`
 
 Определяет значение поля `name`, отправляемое на сервер. Всегда отправляется в паре со значением поля `val`.
 
-Не использутеся, если выбран тип кнопки с модификатором <code>type</code> в значении <code>link</code>.
+Не используется, если выбран тип кнопки с модификатором <code>type</code> в значении <code>link</code>.
+
+<a name="buttonval"></a>
 
 #### Поле `val`
 
 Определяет значение поля `val`, отправляемое на сервер. Всегда отправляется в паре со значением поля `name`.
 
-Не использутеся, если выбран тип кнопки с модификатором <code>type</code> в значении <code>link</code>.
+Не используется, если выбран тип кнопки с модификатором <code>type</code> в значении <code>link</code>.
 
 ```bemjson
 {
@@ -306,19 +308,25 @@
 }
 ```
 
+<a name="buttontext"></a>
+
 #### Поле `text`
 
 Определяет текст, который отображается на кнопке.
 
+<a name="buttonurl"></a>
+
 #### Поле `url`
 
-Определяет адрес, по которому осуществляется переход при нажатии на <a href="link-button">кнопку-ссылку</a>.
+Определяет адрес, по которому осуществляется переход при нажатии на <a href="#link-button">кнопку-ссылку</a>.
 
 Не используется с другими типами кнопок.
 
+<a name="buttonicon"></a>
+
 #### Поле `icon`
 
-Определяет иконку, которая отображается на кнопке. Иконка задается с помощью блока [icon](../icon.ru.md).
+Определяет иконку, которая отображается на кнопке. Иконка задается с помощью блока [icon](../icon/icon.ru.md).
 
 ```bemjson
 {
@@ -331,6 +339,8 @@
     }
 }
 ```
+
+<a name="buttontitle"></a>
 
 #### Поле `title`
 
@@ -347,9 +357,13 @@
 }
 ```
 
+<a name="buttonid"></a>
+
 #### Поле `id`
 
 Определяет уникальный идентификатор кнопки.
+
+<a name="buttontab"></a>
 
 #### Поле `tabIndex`
 
