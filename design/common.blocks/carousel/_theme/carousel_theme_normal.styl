@@ -1,0 +1,56 @@
+.carousel_theme_normal
+{
+    position: relative;
+
+    overflow: hidden;
+
+    width: 400px;
+
+    .carousel__inner
+    {
+        position: relative;
+        transition: left .3s;
+
+        .carousel__item
+        {
+            display: inline-block;
+
+            vertical-align: top;
+
+            .image
+            {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .carousel__switches
+    {
+        display: block;
+        text-align: center;
+    }
+
+    .carousel__arrow
+    {
+        width: 30px;
+        height: 30px;
+
+        display: inline-block;
+        cursor: pointer;
+
+        background: no-repeat url(../../theme/_islands/arrow.svg);
+        background-size: 100%;
+
+        &_direction_prev
+        {
+            transform: rotate(90deg);
+        }
+
+        &_direction_next
+        {
+            transform: rotate(-90deg);
+            float: right; // temp
+        }
+    }
+}
