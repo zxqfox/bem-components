@@ -2,7 +2,7 @@
  * @module map
  */
 
-modules.define('map', ['i-bem__dom'], function(provide, BEMDOM) {
+modules.define('map', ['i-bem__dom', 'ymaps'], function(provide, BEMDOM, ymaps) {
 
 /**
  * @exports
@@ -29,8 +29,8 @@ provide(BEMDOM.decl({ block : this.name }, /** @lends map.prototype */{
             placemarks = params.placemarks;
 
         this.ymap = new ymaps.Map(mapId, {
-            center: params.center,
-            zoom  : params.zoom
+            center : params.center,
+            zoom : params.zoom
         });
 
         if(placemarks) {
