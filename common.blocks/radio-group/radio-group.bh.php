@@ -8,6 +8,7 @@ return function ($bh) {
             ->mix([ 'block' => 'control-group' ]);
 
         $mods = $ctx->mods();
+        $isValDef = key_exists('val', $json);
         $content = [];
 
         foreach ($json->options as $i => $option) {
@@ -21,7 +22,7 @@ return function ($bh) {
                     'mode' => $mods->mode,
                     'theme' => $mods->theme,
                     'size' => $mods->size,
-                    'checked' => @$option['checked'],
+                    'checked' => $isValDef && $json->val === @$option['val'],
                     'disabled' => @$option['disabled'] ?: $mods->disabled
                 ],
                 'name' => $json->name,

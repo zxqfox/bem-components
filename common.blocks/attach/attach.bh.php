@@ -4,14 +4,8 @@ return function ($bh) {
     $bh->match('attach', function($ctx, $json) {
         $ctx
             ->tParam('_attach', $json)
-
             ->tag('span')
-
             ->js(true);
-
-        if ($ctx->content() !== null) {
-            return;
-        }
 
         $button = $json->button;
         if ($ctx->isSimple($button)) {
@@ -35,7 +29,7 @@ return function ($bh) {
                 'elem' => 'no-file',
                 'content' => $json->noFileText
             ]
-        ]);
+        ], true);
     });
 
 };

@@ -8,6 +8,11 @@ return function ($bh) {
             ->mix([ 'block' => 'control-group' ]);
 
         $mods = $ctx->mods();
+        $val = $json->val;
+        $isValDef = key_exists('val', $json);
+
+        if ($isValDef && !is_array($val)) throw new \Exception('checkbox-group: val must be an array');
+
         $content = [];
         if ($json->options) {
             foreach ($json->options as $i => $option) {
@@ -19,7 +24,7 @@ return function ($bh) {
                             'type' => $mods->type,
                             'theme' => $mods->theme,
                             'size' => $mods->size,
-                            'checked' => @$option['checked'],
+                            'checked' => $isValDef && in_array(@$option['val'], $val),
                             'disabled' => @$option['disabled'] ?: $mods->disabled
                         ],
                         'name' => $json->name,
